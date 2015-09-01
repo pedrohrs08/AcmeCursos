@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:49495/ServicesImplementation/CursoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" />
+  <xs:import schemaLocation="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" />
+  <xs:import schemaLocation="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:element name="Get">
     <xs:complexType>
       <xs:sequence>
@@ -52,6 +53,35 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" minOccurs="0" name="SaveResult" nillable="true" type="q4:Curso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCursoComProfessores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCursoComProfessoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" minOccurs="0" name="GetCursoComProfessoresResult" nillable="true" type="q5:Curso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveWithProfessores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" minOccurs="0" name="curso" nillable="true" type="q6:Curso" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ProfessorIds" nillable="true" type="q7:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveWithProfessoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" minOccurs="0" name="SaveWithProfessoresResult" nillable="true" type="q8:Curso" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

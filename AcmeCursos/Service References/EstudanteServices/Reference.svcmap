@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bb707642-2f5f-4d35-8d7f-5b71716c3b26" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="be7b9de5-de89-490f-8f8f-5bbe3002908e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -21,14 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:49495/ServicesImplementation/EstudanteService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EstudanteService.xsd" MetadataType="Schema" ID="669c651e-9c08-4e6f-a50e-2905e2034ece" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/EstudanteService.svc?xsd=xsd1" />
-    <MetadataFile FileName="EstudanteService1.xsd" MetadataType="Schema" ID="638b4021-f9b2-4ed1-a0a7-eac84eea6ecf" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/EstudanteService.svc?xsd=xsd0" />
-    <MetadataFile FileName="EstudanteService.disco" MetadataType="Disco" ID="1a68f631-7e8e-496b-bdce-3c1dd62a1d35" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/EstudanteService.svc?disco" />
-    <MetadataFile FileName="EstudanteService2.xsd" MetadataType="Schema" ID="a859e41a-cf45-4abf-84cf-5cf666a6c68a" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/EstudanteService.svc?xsd=xsd2" />
-    <MetadataFile FileName="EstudanteService.wsdl" MetadataType="Wsdl" ID="8d2827fa-109b-49d7-b7d2-d3eb8d3a1329" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/EstudanteService.svc?wsdl" />
+    <MetadataFile FileName="EstudanteService.xsd" MetadataType="Schema" ID="e4f56b53-2125-48c6-bb04-b569bfae62dc" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EstudanteService1.xsd" MetadataType="Schema" ID="925f78b2-20e1-498c-b068-f013508afaf3" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EstudanteService2.xsd" MetadataType="Schema" ID="25951e0e-d8e5-4bfa-8426-19a055ebc164" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EstudanteService.disco" MetadataType="Disco" ID="f3d73350-4653-475c-b28e-14d051ba28c8" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc?disco" />
+    <MetadataFile FileName="EstudanteService.wsdl" MetadataType="Wsdl" ID="86899bca-0822-4954-a578-3c71aaee0859" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -38,6 +38,18 @@ namespace AcmeCursos.CursoServices {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudOf_Curso/Save", ReplyAction="http://tempuri.org/ICrudOf_Curso/SaveResponse")]
         System.Threading.Tasks.Task<AcmeCursos.Models.Curso> SaveAsync(AcmeCursos.Models.Curso entity);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICursoService/GetCursoComProfessores", ReplyAction="http://tempuri.org/ICursoService/GetCursoComProfessoresResponse")]
+        AcmeCursos.Models.Curso GetCursoComProfessores(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICursoService/GetCursoComProfessores", ReplyAction="http://tempuri.org/ICursoService/GetCursoComProfessoresResponse")]
+        System.Threading.Tasks.Task<AcmeCursos.Models.Curso> GetCursoComProfessoresAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICursoService/SaveWithProfessores", ReplyAction="http://tempuri.org/ICursoService/SaveWithProfessoresResponse")]
+        AcmeCursos.Models.Curso SaveWithProfessores(AcmeCursos.Models.Curso curso, int[] ProfessorIds);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICursoService/SaveWithProfessores", ReplyAction="http://tempuri.org/ICursoService/SaveWithProfessoresResponse")]
+        System.Threading.Tasks.Task<AcmeCursos.Models.Curso> SaveWithProfessoresAsync(AcmeCursos.Models.Curso curso, int[] ProfessorIds);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -97,6 +109,22 @@ namespace AcmeCursos.CursoServices {
         
         public System.Threading.Tasks.Task<AcmeCursos.Models.Curso> SaveAsync(AcmeCursos.Models.Curso entity) {
             return base.Channel.SaveAsync(entity);
+        }
+        
+        public AcmeCursos.Models.Curso GetCursoComProfessores(int id) {
+            return base.Channel.GetCursoComProfessores(id);
+        }
+        
+        public System.Threading.Tasks.Task<AcmeCursos.Models.Curso> GetCursoComProfessoresAsync(int id) {
+            return base.Channel.GetCursoComProfessoresAsync(id);
+        }
+        
+        public AcmeCursos.Models.Curso SaveWithProfessores(AcmeCursos.Models.Curso curso, int[] ProfessorIds) {
+            return base.Channel.SaveWithProfessores(curso, ProfessorIds);
+        }
+        
+        public System.Threading.Tasks.Task<AcmeCursos.Models.Curso> SaveWithProfessoresAsync(AcmeCursos.Models.Curso curso, int[] ProfessorIds) {
+            return base.Channel.SaveWithProfessoresAsync(curso, ProfessorIds);
         }
     }
 }

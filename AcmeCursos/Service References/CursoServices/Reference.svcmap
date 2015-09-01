@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1ee10e35-5156-4a17-8d81-e36884bcef5d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a61d2c64-ca75-4044-8ca1-d5ba7c9bf332" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -21,14 +21,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:49495/ServicesImplementation/CursoService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursoService.disco" MetadataType="Disco" ID="d3c84536-69ee-4ed3-9f30-63e45a9b873a" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/CursoService.svc?disco" />
-    <MetadataFile FileName="CursoService.xsd" MetadataType="Schema" ID="7b5b106e-3617-4ab1-8783-95e08b1d9abd" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/CursoService.svc?xsd=xsd1" />
-    <MetadataFile FileName="CursoService1.xsd" MetadataType="Schema" ID="856b7c05-7db1-4bcb-a6f2-43778e75051b" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/CursoService.svc?xsd=xsd2" />
-    <MetadataFile FileName="CursoService.wsdl" MetadataType="Wsdl" ID="9b55004d-e2ee-49f0-bbd9-9ab4ea0e2c3c" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/CursoService.svc?wsdl" />
-    <MetadataFile FileName="CursoService2.xsd" MetadataType="Schema" ID="1a656739-de33-4ce5-9a52-5f5b4884a565" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/CursoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CursoService.xsd" MetadataType="Schema" ID="aacf1778-47f2-4323-b8c1-2c6cd0e863ce" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CursoService1.xsd" MetadataType="Schema" ID="cf0df2ef-9923-42aa-87e9-5ccbd9645674" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CursoService2.xsd" MetadataType="Schema" ID="19fb2621-1ab8-4cd1-a0d6-17109a983fe7" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CursoService.disco" MetadataType="Disco" ID="f22ffaa8-1c4c-4125-8f93-7cd78f6b23cb" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc?disco" />
+    <MetadataFile FileName="CursoService3.xsd" MetadataType="Schema" ID="eed28a35-0555-406e-a0dc-6ac59876a843" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CursoService.wsdl" MetadataType="Wsdl" ID="2cdc7fd6-d5f4-42b5-bbb1-7d1e6f3719d8" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/CursoService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

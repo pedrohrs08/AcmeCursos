@@ -209,6 +209,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\CursoViewModel.cs" />
     <Compile Include="ViewModel\ProfessorViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +231,7 @@
     <Content Include="Properties\DataSources\AcmeCursos.Models.Leciona.datasource" />
     <None Include="Properties\PublishProfiles\acmecursospedrosoaresview - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\acmecursospedrosoaresview - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\acmecursospedrosoaresview.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -252,12 +254,25 @@
     <None Include="Service References\CursoServices\CursoService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EstudanteServices\EstudanteService.disco" />
-    <None Include="Service References\EstudanteServices\configuration91.svcinfo" />
-    <None Include="Service References\EstudanteServices\configuration.svcinfo" />
-    <None Include="Service References\EstudanteServices\Reference.svcmap">
+    <None Include="Service References\CursoServices\CursoService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CursoServices\CursoService.disco" />
+    <None Include="Service References\CursoServices\configuration91.svcinfo" />
+    <None Include="Service References\CursoServices\configuration.svcinfo" />
+    <None Include="Service References\CursoServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EstudanteServices\EstudanteService.wsdl" />
+    <None Include="Service References\EstudanteServices\EstudanteService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EstudanteServices\EstudanteService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EstudanteServices\EstudanteService2.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\InscricaoServices\InscricaoService.wsdl" />
     <None Include="Service References\InscricaoServices\InscricaoService.xsd">
@@ -276,10 +291,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\CursoServices\CursoService.disco" />
-    <None Include="Service References\CursoServices\configuration91.svcinfo" />
-    <None Include="Service References\CursoServices\configuration.svcinfo" />
-    <None Include="Service References\CursoServices\Reference.svcmap">
+    <None Include="Service References\EstudanteServices\EstudanteService.disco" />
+    <None Include="Service References\EstudanteServices\configuration91.svcinfo" />
+    <None Include="Service References\EstudanteServices\configuration.svcinfo" />
+    <None Include="Service References\EstudanteServices\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -345,16 +360,6 @@
     <Content Include="Views\Shared\Sucesso.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Inscricoes.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Cursos.cshtml" />
-    <None Include="Service References\EstudanteServices\EstudanteService.wsdl" />
-    <None Include="Service References\EstudanteServices\EstudanteService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EstudanteServices\EstudanteService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EstudanteServices\EstudanteService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\ProfessorServices\ProfessorService.wsdl" />
     <None Include="Service References\ProfessorServices\ProfessorService.xsd">
       <SubType>Designer</SubType>
@@ -368,6 +373,7 @@
     <None Include="Service References\ProfessorServices\ProfessorService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\Shared\DisplayTemplates\Professores.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

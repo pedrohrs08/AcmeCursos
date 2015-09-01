@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EstudanteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IEstudanteService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://localhost:49495/ServicesImplementation/EstudanteService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:49495/ServicesImplementation/EstudanteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:49495/ServicesImplementation/EstudanteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" />
+      <xsd:import schemaLocation="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AcmeCursos.Models" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IEstudanteService_Get_InputMessage">
@@ -107,9 +132,61 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_IEstudanteService" type="tns:IEstudanteService">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IEstudanteService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get">
+      <soap:operation soapAction="http://tempuri.org/ICrudOf_Estudante/Get" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/ICrudOf_Estudante/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://tempuri.org/ICrudOf_Estudante/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Save">
+      <soap:operation soapAction="http://tempuri.org/ICrudOf_Estudante/Save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstudanteComCursos">
+      <soap:operation soapAction="http://tempuri.org/IEstudanteService/GetEstudanteComCursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
   <wsdl:service name="EstudanteService">
     <wsdl:port name="BasicHttpBinding_IEstudanteService" binding="tns:BasicHttpBinding_IEstudanteService">
-      <soap:address location="http://localhost:49495/ServicesImplementation/EstudanteService.svc" />
+      <soap:address location="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_IEstudanteService" binding="tns:BasicHttpsBinding_IEstudanteService">
+      <soap:address location="https://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/EstudanteService.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

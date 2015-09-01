@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4902490e-1ce7-461b-87dd-6030095d6252" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="095f27ec-2b50-4f45-a423-4eca3577d7ed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -21,14 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:49495/ServicesImplementation/InscricaoService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/InscricaoService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="InscricaoService.xsd" MetadataType="Schema" ID="a264aa76-7ad1-4eac-b41c-eafbf8997e9f" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?xsd=xsd2" />
-    <MetadataFile FileName="InscricaoService.disco" MetadataType="Disco" ID="08bd9681-6086-4fe6-b117-b0a102852618" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?disco" />
-    <MetadataFile FileName="InscricaoService1.xsd" MetadataType="Schema" ID="0bf07b07-8df7-4e94-aeda-f857feeb924a" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?xsd=xsd1" />
-    <MetadataFile FileName="InscricaoService2.xsd" MetadataType="Schema" ID="a4d6afb5-753a-4503-99e4-810fda7ecc95" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?xsd=xsd0" />
-    <MetadataFile FileName="InscricaoService.wsdl" MetadataType="Wsdl" ID="1443eaea-1a54-43d0-959a-09c9b198e391" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?wsdl" />
+    <MetadataFile FileName="InscricaoService.xsd" MetadataType="Schema" ID="b9f2cea1-138b-4205-b897-62f43a0db306" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/InscricaoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InscricaoService1.xsd" MetadataType="Schema" ID="b66e5ccb-156d-4f9c-b9c0-5955aefc2b56" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/InscricaoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InscricaoService2.xsd" MetadataType="Schema" ID="fc10f30e-214d-41dd-883b-6b7e384712b4" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/InscricaoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InscricaoService.wsdl" MetadataType="Wsdl" ID="25b7f2a4-85cb-4e15-baad-a8107444f12e" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/InscricaoService.svc?wsdl" />
+    <MetadataFile FileName="InscricaoService.disco" MetadataType="Disco" ID="d04595e5-a699-4274-8678-a95fd5b3c118" SourceId="1" SourceUrl="http://acmecursospedrosoares.azurewebsites.net/ServicesImplementation/InscricaoService.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

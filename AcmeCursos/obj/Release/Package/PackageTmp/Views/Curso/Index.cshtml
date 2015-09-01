@@ -12,12 +12,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DataLimiteInscricao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Nome)
         </th>
         <th></th>
@@ -25,12 +19,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataLimiteInscricao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Nome)
         </td>

@@ -6,12 +6,14 @@ using System.Web.Mvc;
 using AcmeCursos.CursoServices;
 using AcmeCursos.Models;
 using System.Net;
+using AcmeCursos.ViewModel;
 
 namespace AcmeCursos.Controllers
 {
     public class CursoController : Controller
     {
         CursoServiceClient client = new CursoServiceClient();
+        ProfessorServices.ProfessorServiceClient professorClient = new ProfessorServices.ProfessorServiceClient();
         // GET: Curso
         public ActionResult Index()
         {
@@ -25,7 +27,7 @@ namespace AcmeCursos.Controllers
             if (!id.HasValue)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
-            Curso curso = client.Get(id ?? 0);
+            Curso curso = client.GetCursoComProfessores(id ?? 0);
 
             if (curso == null)
                 return HttpNotFound();
@@ -36,21 +38,36 @@ namespace AcmeCursos.Controllers
         // GET: Curso/Create
         public ActionResult Create()
         {
-            return View(new Curso { DataLimiteInscricao = DateTime.Now });
+            CursoViewModel cursoViewModel = new CursoViewModel()
+            {
+                Curso = new Curso()
+                {
+                   Professores = new List<Professor>()
+                }
+            };
+
+            var allProfessores = professorClient.GetAll();
+            cursoViewModel.TodosProfessores = allProfessores.Select(professor => new SelectListItem
+            {
+                Text = professor.Nome,
+                Value = professor.Id.ToString()
+            });
+            return View(cursoViewModel);
         }
 
         // POST: Curso/Create
         [HttpPost]
-        public ActionResult Create(Curso curso)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(CursoViewModel cursoViewModel)
         {
-            try
+            if(ModelState.IsValid)
             {
-                client.Save(curso);
+                client.SaveWithProfessores(cursoViewModel.Curso,cursoViewModel.ProfessoresSelecionados.ToArray());
                 return RedirectToAction("Index");
             }
-            catch
+            else
             {
-                return View(curso);
+                return View(cursoViewModel);
             }
         }
 
@@ -60,27 +77,37 @@ namespace AcmeCursos.Controllers
             if(!id.HasValue)
             return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
-            Curso curso = client.Get(id ?? 0);
+            CursoViewModel cursoViewModel = new CursoViewModel()
+            {
+                Curso = client.Get(id ?? 0)
+            };
 
-            if (curso == null)
+            if (cursoViewModel.Curso == null)
                 return HttpNotFound();
 
-            return View(curso);
+            var allProfessores = professorClient.GetAll();
+            cursoViewModel.TodosProfessores = allProfessores.Select(professor => new SelectListItem
+            {
+                Text = professor.Nome,
+                Value = professor.Id.ToString()
+            });
+
+            return View(cursoViewModel);
         }
 
         // POST: Curso/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, Curso curso)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, CursoViewModel cursoViewModel)
         {
-            try
-            {
-                client.Save(curso);
+            if (ModelState.IsValid) { 
+                client.SaveWithProfessores(cursoViewModel.Curso,cursoViewModel.ProfessoresSelecionados.ToArray());
 
                 return RedirectToAction("Index");
             }
-            catch
+            else
             {
-                return View();
+                return View(cursoViewModel);
             }
         }
 
