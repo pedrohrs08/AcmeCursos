@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4902490e-1ce7-461b-87dd-6030095d6252" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="AcmeCursosSharedModels" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49495/ServicesImplementation/InscricaoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InscricaoService.xsd" MetadataType="Schema" ID="a264aa76-7ad1-4eac-b41c-eafbf8997e9f" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InscricaoService.disco" MetadataType="Disco" ID="08bd9681-6086-4fe6-b117-b0a102852618" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?disco" />
+    <MetadataFile FileName="InscricaoService1.xsd" MetadataType="Schema" ID="0bf07b07-8df7-4e94-aeda-f857feeb924a" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InscricaoService2.xsd" MetadataType="Schema" ID="a4d6afb5-753a-4503-99e4-810fda7ecc95" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InscricaoService.wsdl" MetadataType="Wsdl" ID="1443eaea-1a54-43d0-959a-09c9b198e391" SourceId="1" SourceUrl="http://localhost:49495/ServicesImplementation/InscricaoService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
